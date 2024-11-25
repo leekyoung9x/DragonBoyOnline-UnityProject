@@ -77,7 +77,7 @@ jobs:
           Invoke-WebRequest -UseBasicParsing -Uri $link -Method "POST" -WebSession $session -ContentType "application/x-www-form-urlencoded" -Body "submit=1" -OutFile "DragonBoyOnline.rar"
           & 'C:\Program Files\7-Zip\7z.exe' x DragonBoyOnline.rar -oDragonBoyOnline
       - name: Tải AssemblyCSharpPreprocessor
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         with:
           name: AssemblyCSharpPreprocessor
           repo: ElectroHeavenVN/Dragonboy-CommunityMod-Builds
@@ -94,7 +94,7 @@ jobs:
           AssemblyCSharpPreprocessor/AssemblyCSharpPreprocessor.exe $assemblyCSharp.FullName -d -r -o
           Remove-Item -Force "$($assemblyCSharp.Directory.FullName)\Assembly-CSharp-original.dll"
       - name: Tải xuống AssetRipper.CLI
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         with:
           name: AssetRipper.CLI
           repo: ElectroHeavenVN/AssetRipper

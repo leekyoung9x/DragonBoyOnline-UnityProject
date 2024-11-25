@@ -18,7 +18,7 @@ jobs:
           & 'C:\Program Files\7-Zip\7z.exe' x DragonBoyOnline.rar -oDragonBoyOnline
       - run: tree /f
       - name: Tải AssemblyCSharpPreprocessor
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         with:
           name: AssemblyCSharpPreprocessor
           repo: ElectroHeavenVN/Dragonboy-CommunityMod-Builds
@@ -38,7 +38,7 @@ jobs:
           Remove-Item -Force "$($assemblyCSharp.Directory.FullName)\Assembly-CSharp-original.dll"
       - run: tree /f
       - name: Tải xuống AssetRipper.CLI
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         with:
           name: AssetRipper.CLI
           repo: ElectroHeavenVN/AssetRipper
